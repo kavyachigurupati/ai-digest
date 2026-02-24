@@ -6,9 +6,11 @@ import os
 
 load_dotenv()
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
-def get_daily_tech_digest():
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+# Determine which provider to use
+_use_anthropic = bool(ANTHROPIC_API_KEY and ANTHROPIC_API_KEY != 'your_api_key_here')
+def get_daily_tech_digest():
     prompt = """
         Find 5 interesting articles from the past 2-3 weeks. Prioritize variety across these topics:
 
@@ -63,25 +65,53 @@ def get_daily_tech_digest():
 
         Try to vary the categories across the 5 articles when possible, but prioritize interesting content over forced variety.
         """
-    response = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=2000,
-        tools=[{
-            "type": "web_search_20250305",
-            "name": "web_search"
-        }],
-        messages=[{
-            "role": "user",
-            "content": prompt
-        }]
-    )
-    # Extract the text response
-    result = ""
-    for block in response.content:
-        if block.type == "text":
-            result += block.text
+    if _use_anthropic:
+        # --- Anthropic path (original code) ---
+        client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=2000,
+            tools=[{
+                "type": "web_search_20250305",
+                "name": "web_search"
+            }],
+            messages=[{
+                "role": "user",
+                "content": prompt
+            }]
+        )
+        result: str = ""
+        for block in response.content:
+            if block.type == "text":
+                result += block.text
+        return result
+    else:
+        # --- Google Gemini fallback (direct REST API, works on Python 3.9) ---
+        print("[INFO] No Anthropic key found — falling back to Google Gemini.")
+        import requests as req
+        base = "https://generativelanguage.googleapis.com/v1beta"
 
-    return result
+        # 1. Discover available models
+        list_resp = req.get(f"{base}/models?key={GOOGLE_API_KEY}", timeout=30)
+        list_resp.raise_for_status()
+        models = list_resp.json().get("models", [])
+        # Pick first model that supports generateContent
+        chosen = None
+        for m in models:
+            if "generateContent" in m.get("supportedGenerationMethods", []):
+                chosen = m["name"].replace("models/", "")
+                print(f"[INFO] Using model: {chosen}")
+                break
+        if not chosen:
+            raise RuntimeError("No generateContent-capable models found for this API key.")
+
+        # 2. Generate content
+        payload = {"contents": [{"parts": [{"text": prompt}]}]}
+        url = f"{base}/models/{chosen}:generateContent?key={GOOGLE_API_KEY}"
+        resp = req.post(url, json=payload, timeout=120)
+        resp.raise_for_status()
+        data = resp.json()
+        return data["candidates"][0]["content"]["parts"][0]["text"]
 
 # Run it
 if __name__ == "__main__":
