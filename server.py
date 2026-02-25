@@ -1,16 +1,17 @@
 import subprocess
 import sys
+import time
 from flask import Flask, Response, render_template_string
 import threading
-import queue
 
 app = Flask(__name__)
 
-# Change this to your actual script
 SCRIPT_PATH = "/Users/kavya/Desktop/DEV_MODE/ai_digest/ai-digest.py"
 
-output_queue = queue.Queue()
+# Shared output history — all lines from the current run
+output_history = []
 process_done = False
+run_lock = threading.Lock()
 
 HTML = """
 <!DOCTYPE html>
@@ -82,6 +83,7 @@ HTML = """
         evtSource.close();
         return;
       }
+      if (e.data === '') return; // keepalive
       const line = document.createElement('span');
       line.className = 'line';
       line.textContent = e.data;
@@ -101,6 +103,7 @@ HTML = """
 
 def run_script():
     global process_done
+    output_history.clear()
     process = subprocess.Popen(
         [sys.executable, "-u", SCRIPT_PATH],
         stdout=subprocess.PIPE,
@@ -109,25 +112,39 @@ def run_script():
         bufsize=1
     )
     for line in process.stdout:
-        output_queue.put(line.rstrip("\n"))
+        output_history.append(line.rstrip("\n"))
     process.wait()
-    output_queue.put("__DONE__")
+    output_history.append("__DONE__")
     process_done = True
+
+def trigger_run():
+    """Start a new run if one isn't already in progress."""
+    global process_done
+    with run_lock:
+        if not process_done and len(output_history) > 0:
+            return  # already running
+        process_done = False
+        thread = threading.Thread(target=run_script, daemon=True)
+        thread.start()
 
 @app.route("/")
 def index():
+    trigger_run()
     return render_template_string(HTML)
 
 @app.route("/stream")
 def stream():
     def generate():
+        idx = 0
         while True:
-            try:
-                line = output_queue.get(timeout=30)
+            if idx < len(output_history):
+                line = output_history[idx]
                 yield f"data: {line}\n\n"
+                idx += 1
                 if line == "__DONE__":
                     break
-            except queue.Empty:
+            else:
+                time.sleep(0.2)  # wait for new lines
                 yield "data: \n\n"  # keepalive
 
     return Response(generate(), mimetype="text/event-stream",
@@ -136,15 +153,9 @@ def stream():
 @app.route("/run")
 def rerun():
     global process_done
-    process_done = False
-    with output_queue.mutex:
-        output_queue.queue.clear()
-    thread = threading.Thread(target=run_script, daemon=True)
-    thread.start()
+    process_done = True  # force a fresh run on next visit
     return ("", 204)
 
 if __name__ == "__main__":
-    # Start the script immediately on server launch
-    thread = threading.Thread(target=run_script, daemon=True)
-    thread.start()
+    trigger_run()
     app.run(host="0.0.0.0", port=3000, threaded=True)
