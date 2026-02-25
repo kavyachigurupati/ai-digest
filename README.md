@@ -1,61 +1,60 @@
-# Update the README.md file
-
-cat > README.md << 'EOF'
-
 # AI Digest
 
-A daily AI/Tech news digest tool that uses Claude API to fetch and summarize the latest AI news.
+A daily AI/Tech news digest tool that fetches and summarizes the latest AI news. It supports both Anthropic's Claude and Google's Gemini as fallback.
 
 ## Setup
 
-### 1. Check Poetry Version
+### 1. Install Dependencies
 
-```bash
-poetry --version
-```
-
-### 2. Install Dependencies
+This project uses [Poetry](https://python-poetry.org/) for dependency management.
 
 ```bash
 poetry install
 ```
 
-If starting fresh:
-
-```bash
-poetry init
-poetry add anthropic python-dotenv
-```
-
-### 3. Configure API Key
+### 2. Configure API Keys
 
 Create a `.env` file in the project root:
 
+```env
+ANTHROPIC_API_KEY=your_anthropic_key_here
+GOOGLE_API_KEY=your_google_key_here
 ```
-ANTHROPIC_API_KEY=your_api_key_here
-```
+*(If the Anthropic key is missing or set to `your_api_key_here`, the app will automatically fall back to Google Gemini).*
 
-### 4. Activate Virtual Environment
+---
+
+## Usage
+
+### Option 1: Run via Terminal
+
+To generate the digest directly in your terminal:
 
 ```bash
-poetry shell
+poetry run python ai-digest.py
 ```
 
-### 5. Run the Script
+### Option 2: Run via Web Server (Live UI)
 
-```bash
-python ai-digest.py
-```
+We have a Flask server that provides a terminal-like streaming UI in the browser.
 
-## Features
+1. **Start the server:**
+   ```bash
+   poetry run python server.py
+   ```
+2. **Open in browser:**
+   Go to [http://localhost:3000](http://localhost:3000). The digest will automatically run and stream output to the page on visit.
 
-- Fetches latest AI/ML news from the past 24 hours
-- Covers AI research, startup news, new tools, and big tech AI developments
-- Uses Claude's web search capabilities for real-time information
-  EOF
+### Option 3: Publicly Share (Cloudflare Tunnel)
 
-# Add and commit
+To share the running server with others over the public internet, you can use a free Cloudflare Tunnel.
 
-git add README.md
-git commit -m "Update README with setup instructions"
-git push origin master
+1. Install Cloudflared (Mac via Homebrew):
+   ```bash
+   brew install cloudflare/cloudflare/cloudflared
+   ```
+2. While `server.py` is running, open a **new terminal tab** and run:
+   ```bash
+   cloudflared tunnel --url http://localhost:3000
+   ```
+3. Look for the output line containing `trycloudflare.com`. Share that URL! Anyone visiting the link will trigger a fresh run of the AI digest.
