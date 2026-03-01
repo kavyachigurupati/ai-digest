@@ -1,0 +1,282 @@
+[
+  {
+    "title": "Mount Mayhem at Netflix: Scaling Containers on Modern CPUs",
+    "url": "https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4",
+    "description": "Authors: Harshad Sane , Andrew Halaney Imagine this \u2014 you click play on Netflix on a Friday night and behind the scenes hundreds of containers spring to action in a few seconds to answer your call. At Netflix, scaling containers efficiently is critical to delivering a seamless streaming experience to millions of members worldwide. To keep up with responsiveness at this scale, we modernized our container runtime, only to hit a surprising bottleneck: the CPU architecture itself. Let us walk you th",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:34.560132+00:00"
+  },
+  {
+    "title": "MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix",
+    "url": "https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss----2615bd06b42e---4",
+    "description": "Avneesh Saluja , Santiago Castro , Bowei Yan , Ashish Rastogi Introduction Netflix\u2019s core mission is to connect millions of members around the world with stories they\u2019ll love. This requires not just an incredible catalog, but also a deep, machine-level understanding of every piece of content in that catalog, from the biggest blockbusters to the most niche documentaries. As we onboard new types of content such as live events and podcasts, the need to scalably understand these nuances becomes even",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:34.560824+00:00"
+  },
+  {
+    "title": "Scaling LLM Post-Training at Netflix",
+    "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4",
+    "description": "Baolin Li , Lingyi Liu , Binh Tang , Shaojing Li Introduction Pre-training gives Large Language Models (LLMs) broad linguistic ability and general world knowledge, but post-training is the phase that actually aligns them to concrete intents, domain constraints, and the reliability requirements of production environments. At Netflix, we are exploring how LLMs can enable new member experiences across recommendation, personalization, and search, which requires adapting generic foundation models so ",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:34.561643+00:00"
+  },
+  {
+    "title": "Automating RDS Postgres to Aurora Postgres Migration",
+    "url": "https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4",
+    "description": "Ram Srivasta Kannan, Wale Akintayo , Jay Bharadwaj , John Crimmins , Shengwei Wang, Zhitao Zhu Introduction In 2024, the Online Data Stores team at Netflix conducted a comprehensive review of the relational database technologies used across the company. This evaluation examined functionality, performance, and total cost of ownership across our database ecosystem. Based on this analysis, we decided to standardize on Amazon Aurora PostgreSQL as the primary relational database offering for Netflix ",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:34.563295+00:00"
+  },
+  {
+    "title": "The AI Evolution of Graph Search at Netflix",
+    "url": "https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4",
+    "description": "The AI Evolution of Graph Search at Netflix: From Structured Queries to Natural Language By Alex Hutter and Bartosz Balukiewicz Our previous blog posts ( part 1 , part 2 , part 3 ) detailed how Netflix\u2019s Graph Search platform addresses the challenges of searching across federated data sets within Netflix\u2019s enterprise ecosystem. Although highly scalable and easy to configure, it still relies on a structured query language for input. Natural language based search has been possible for some time, b",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:34.564212+00:00"
+  },
+  {
+    "title": "Toxic combinations: when small signals add up to a security incident",
+    "url": "https://blog.cloudflare.com/toxic-combinations-security/",
+    "description": "Minor misconfigurations or request anomalies often seem harmless in isolation. But when these small signals converge, they can trigger a security incident known as a toxic combination. Here\u2019s how to spot the signs.",
+    "source": "Cloudflare Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:35.376328+00:00"
+  },
+  {
+    "title": "We deserve a better streams API for JavaScript",
+    "url": "https://blog.cloudflare.com/a-better-web-streams-api/",
+    "description": "The Web streams API has become ubiquitous in JavaScript runtimes but was designed for a different era. Here's what a modern streaming API could (should?) look like.",
+    "source": "Cloudflare Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:35.376360+00:00"
+  },
+  {
+    "title": "The most-seen UI on the Internet? Redesigning Turnstile and Challenge Pages",
+    "url": "https://blog.cloudflare.com/the-most-seen-ui-on-the-internet-redesigning-turnstile-and-challenge-pages/",
+    "description": "We serve 7.6 billion challenges daily. Here\u2019s how we used research, AAA accessibility standards, and a unified architecture to redesign the Internet\u2019s most-seen user interface.",
+    "source": "Cloudflare Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:35.376376+00:00"
+  },
+  {
+    "title": "Bringing more transparency to post-quantum usage, encrypted messaging, and routing security",
+    "url": "https://blog.cloudflare.com/radar-origin-pq-key-transparency-aspa/",
+    "description": "Cloudflare Radar has added new tools for monitoring PQ adoption, KT logs for messaging, and ASPA routing records to track the Internet's migration toward more secure encryption and routing standards.",
+    "source": "Cloudflare Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:35.376392+00:00"
+  },
+  {
+    "title": "ASPA: making Internet routing more secure",
+    "url": "https://blog.cloudflare.com/aspa-secure-internet/",
+    "description": "ASPA is the cryptographic upgrade for BGP that helps prevent route leaks by verifying the path network traffic takes. New features in Cloudflare Radar make tracking its adoption easy.",
+    "source": "Cloudflare Blog",
+    "category": "Engineering",
+    "scraped_at": "2026-03-01T05:26:35.376407+00:00"
+  },
+  {
+    "title": "Interactive explanations",
+    "url": "https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/#atom-everything",
+    "description": "Agentic Engineering Patterns &gt; When we lose track of how code written by our agents works we take on cognitive debt . For a lot of things this doesn't matter: if the code fetches some data from a database and outputs it as JSON the implementation details are likely simple enough that we don't need to care. We can try out the new feature and make a very solid guess at how it works, then glance over the code to be sure. Often though the details really do matter. If the core of our application b",
+    "source": "Simon Willison",
+    "category": "LLM/AI",
+    "scraped_at": "2026-03-01T05:26:36.298669+00:00"
+  },
+  {
+    "title": "Please, please, please stop using passkeys for encrypting user data",
+    "url": "https://simonwillison.net/2026/Feb/27/passkeys/#atom-everything",
+    "description": "Please, please, please stop using passkeys for encrypting user data Because users lose their passkeys all the time , and may not understand that their data has been irreversibly encrypted using them and can no longer be recovered. Tim Cappalli: To the wider identity industry: please stop promoting and using passkeys to encrypt user data. I\u2019m begging you. Let them be great, phishing-resistant authentication credentials . Via lobste.rs Tags: security , usability , passkeys",
+    "source": "Simon Willison",
+    "category": "LLM/AI",
+    "scraped_at": "2026-03-01T05:26:36.298718+00:00"
+  },
+  {
+    "title": "An AI agent coding skeptic tries AI agent coding, in excessive detail",
+    "url": "https://simonwillison.net/2026/Feb/27/ai-agent-coding-in-excessive-detail/#atom-everything",
+    "description": "An AI agent coding skeptic tries AI agent coding, in excessive detail Another in the genre of \"OK, coding agents got good in November\" posts, this one is by Max Woolf and is very much worth your time. He describes a sequence of coding agent projects, each more ambitious than the last - starting with simple YouTube metadata scrapers and eventually evolving to this: It would be arrogant to port Python's scikit-learn \u2014 the gold standard of data science and machine learning libraries \u2014 to Rust with ",
+    "source": "Simon Willison",
+    "category": "LLM/AI",
+    "scraped_at": "2026-03-01T05:26:36.298825+00:00"
+  },
+  {
+    "title": "Free Claude Max for (large project) open source maintainers",
+    "url": "https://simonwillison.net/2026/Feb/27/claude-max-oss-six-months/#atom-everything",
+    "description": "Free Claude Max for (large project) open source maintainers Anthropic are now offering their $200/month Claude Max 20x plan for free to open source maintainers... for six months... and you have to meet the following criteria: Maintainers: You're a primary maintainer or core team member of a public repo with 5,000+ GitHub stars or 1M+ monthly NPM downloads. You've made commits, releases, or PR reviews within the last 3 months. Don't quite fit the criteria If you maintain something the ecosystem q",
+    "source": "Simon Willison",
+    "category": "LLM/AI",
+    "scraped_at": "2026-03-01T05:26:36.298874+00:00"
+  },
+  {
+    "title": "Unicode Explorer using binary search over fetch() HTTP range requests",
+    "url": "https://simonwillison.net/2026/Feb/27/unicode-explorer/#atom-everything",
+    "description": "Unicode Explorer using binary search over fetch() HTTP range requests Here's a little prototype I built this morning from my phone as an experiment in HTTP range requests, and a general example of using LLMs to satisfy curiosity. I've been collecting HTTP range tricks for a while now, and I decided it would be fun to build something with them myself that used binary search against a large file to do something useful. So I brainstormed with Claude . The challenge was coming up with a use case for",
+    "source": "Simon Willison",
+    "category": "LLM/AI",
+    "scraped_at": "2026-03-01T05:26:36.298981+00:00"
+  },
+  {
+    "title": "The Pulse: Cloudflare rewrites Next.js as AI rewrites commercial open source",
+    "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-164-nextjs",
+    "description": "An engineer at Cloudflare rewrote most of Vercel&#8217;s Next.js in one week with AI agents. It looks like a sign of how AI will disrupt existing moats and business models. Analysis",
+    "source": "Pragmatic Engineer",
+    "category": "Engineering/Culture",
+    "scraped_at": "2026-03-01T05:26:36.687073+00:00"
+  },
+  {
+    "title": "Mitchell Hashimoto\u2019s new way of writing code",
+    "url": "https://newsletter.pragmaticengineer.com/p/mitchell-hashimoto",
+    "description": "Mitchell Hashimoto on building HashiCorp, navigating the cloud giants, and how AI agents have transformed his day-to-day engineering workflow.",
+    "source": "Pragmatic Engineer",
+    "category": "Engineering/Culture",
+    "scraped_at": "2026-03-01T05:26:36.687097+00:00"
+  },
+  {
+    "title": "The Future of Software Engineering with AI: Six Predictions",
+    "url": "https://newsletter.pragmaticengineer.com/p/the-future-of-software-engineering-with-ai",
+    "description": "Notes from The Pragmatic Summit and &#8216;The Future of Software Development&#8217; workshop",
+    "source": "Pragmatic Engineer",
+    "category": "Engineering/Culture",
+    "scraped_at": "2026-03-01T05:26:36.687109+00:00"
+  },
+  {
+    "title": "The Pulse #162: Even fewer middle managers and more flexible teams?",
+    "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-162-even-fewer-middle-managers",
+    "description": "Also: Anthropic bans third-party devs while Codex embraces them, Peter Steinberger joins OpenAI, a lot more software gets created with AI, and more",
+    "source": "Pragmatic Engineer",
+    "category": "Engineering/Culture",
+    "scraped_at": "2026-03-01T05:26:36.687122+00:00"
+  },
+  {
+    "title": "How Codex is built",
+    "url": "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
+    "description": "A deepdive into how OpenAI's Codex team builds its coding agent, how engineers use it, and what it could mean for the future of software engineering. Exclusive",
+    "source": "Pragmatic Engineer",
+    "category": "Engineering/Culture",
+    "scraped_at": "2026-03-01T05:26:36.687136+00:00"
+  },
+  {
+    "title": "Google quantum-proofs HTTPS by squeezing 15kB of data into 700-byte space",
+    "url": "https://arstechnica.com/security/2026/02/google-is-using-clever-math-to-quantum-proof-https-certificates/",
+    "description": "Merkle Tree Certificate support is already in Chrome. Soon, it will be everywhere.",
+    "source": "Ars Technica",
+    "category": "Tech News",
+    "scraped_at": "2026-03-01T05:26:37.142189+00:00"
+  },
+  {
+    "title": "New AirSnitch attack bypasses Wi-Fi encryption in homes, offices, and enterprises",
+    "url": "https://arstechnica.com/security/2026/02/new-airsnitch-attack-breaks-wi-fi-encryption-in-homes-offices-and-enterprises/",
+    "description": "That guest network you set up for your neighbors may not be as secure as you think.",
+    "source": "Ars Technica",
+    "category": "Tech News",
+    "scraped_at": "2026-03-01T05:26:37.142213+00:00"
+  },
+  {
+    "title": "Password managers' promise that they can't see your vaults isn't always true",
+    "url": "https://arstechnica.com/security/2026/02/password-managers-promise-that-they-cant-see-your-vaults-isnt-always-true/",
+    "description": "Contrary to what password managers say, a server compromise can mean game over.",
+    "source": "Ars Technica",
+    "category": "Tech News",
+    "scraped_at": "2026-03-01T05:26:37.142229+00:00"
+  },
+  {
+    "title": "Most VMware users still \"actively reducing their VMware footprint,\" survey finds",
+    "url": "https://arstechnica.com/information-technology/2026/02/most-vmware-users-still-actively-reducing-their-vmware-footprint-survey-finds/",
+    "description": "Broadcom's \"strategy was never to keep every customer,\" CloudBolt report says.",
+    "source": "Ars Technica",
+    "category": "Tech News",
+    "scraped_at": "2026-03-01T05:26:37.142243+00:00"
+  },
+  {
+    "title": "Retraction: After a routine code rejection, an AI agent published a hit piece on someone by name",
+    "url": "https://arstechnica.com/ai/2026/02/after-a-routine-code-rejection-an-ai-agent-published-a-hit-piece-on-someone-by-name/",
+    "description": "This story has been retracted",
+    "source": "Ars Technica",
+    "category": "Tech News",
+    "scraped_at": "2026-03-01T05:26:37.142254+00:00"
+  },
+  {
+    "title": "Henrietta Lacks\u2019 estate settles with Novartis over the \u2018stolen cells\u2019 that advanced science",
+    "url": "https://www.statnews.com/2026/02/28/henrietta-lacks-novartis-settlement-over-hela-cell-line/?utm_campaign=rss",
+    "description": "Novartis becomes the second company to settle after being accused of reaping rewards from a racist medical system.",
+    "source": "STAT News",
+    "category": "Healthcare Tech",
+    "scraped_at": "2026-03-01T05:26:37.327695+00:00"
+  },
+  {
+    "title": "Kennedy announces new vaccine advisory committee members after meeting rescheduled",
+    "url": "https://www.statnews.com/2026/02/27/two-new-members-added-cdc-vaccine-advisory-committee-acip/?utm_campaign=rss",
+    "description": "Kennedy adds two new members to the CDC's vaccine advisory committee",
+    "source": "STAT News",
+    "category": "Healthcare Tech",
+    "scraped_at": "2026-03-01T05:26:37.327716+00:00"
+  },
+  {
+    "title": "STAT+: Minnesota report shows large hospitals continue to dominate the 340B drug discount program",
+    "url": "https://www.statnews.com/pharmalot/2026/02/27/pharma-medicines-hospitals-340b-minnesota-report/?utm_campaign=rss",
+    "description": "Minnesota hospitals and clinics participating in a controversial U.S. drug discount program reaped at least $1.34 billion in revenue in 2024.",
+    "source": "STAT News",
+    "category": "Healthcare Tech",
+    "scraped_at": "2026-03-01T05:26:37.327734+00:00"
+  },
+  {
+    "title": "STAT+: Trump most-favored nation drug pricing deals end after three years for some companies",
+    "url": "https://www.statnews.com/2026/02/27/trump-drug-prices-pharma-mfn-deals-3-year-terms/?utm_campaign=rss",
+    "description": "SEC filings show that, at least for some drugmakers, \"most-favored nation\" drug pricing deals with President Trump last three years.",
+    "source": "STAT News",
+    "category": "Healthcare Tech",
+    "scraped_at": "2026-03-01T05:26:37.327751+00:00"
+  },
+  {
+    "title": "Kansas\u2019 new ID law could have health consequences for trans people",
+    "url": "https://www.statnews.com/2026/02/27/kansas-id-law-impact-health-trans-people-morning-rounds/?utm_campaign=rss",
+    "description": "Get your daily dose of health and medicine every weekday with STAT\u2019s free newsletter Morning Rounds. Sign up here. Happy Friday. If I ever have kids, I want them to be&#8230;",
+    "source": "STAT News",
+    "category": "Healthcare Tech",
+    "scraped_at": "2026-03-01T05:26:37.327774+00:00"
+  },
+  {
+    "title": "Microgpt",
+    "url": "http://karpathy.github.io/2026/02/12/microgpt/",
+    "description": "Hacker News score: 385. ",
+    "source": "Hacker News",
+    "category": "Varied",
+    "scraped_at": "2026-03-01T05:26:37.775328+00:00"
+  },
+  {
+    "title": "We do not think Anthropic should be designated as a supply chain risk",
+    "url": "https://twitter.com/OpenAI/status/2027846016423321831",
+    "description": "Hacker News score: 405. ",
+    "source": "Hacker News",
+    "category": "Varied",
+    "scraped_at": "2026-03-01T05:26:38.059181+00:00"
+  },
+  {
+    "title": "Obsidian Sync now has a headless client",
+    "url": "https://help.obsidian.md/sync/headless",
+    "description": "Hacker News score: 433. ",
+    "source": "Hacker News",
+    "category": "Varied",
+    "scraped_at": "2026-03-01T05:26:38.522371+00:00"
+  },
+  {
+    "title": "The happiest I've ever been",
+    "url": "https://ben-mini.com/2026/the-happiest-ive-ever-been",
+    "description": "Hacker News score: 394. ",
+    "source": "Hacker News",
+    "category": "Varied",
+    "scraped_at": "2026-03-01T05:26:38.987163+00:00"
+  },
+  {
+    "title": "Addressing Antigravity Bans and Reinstating Access",
+    "url": "https://github.com/google-gemini/gemini-cli/discussions/20632",
+    "description": "Hacker News score: 220. ",
+    "source": "Hacker News",
+    "category": "Varied",
+    "scraped_at": "2026-03-01T05:26:39.784324+00:00"
+  }
+]

@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Netflix Tech Blog",
+        "url": "https://netflixtechblog.com/feed",
+        "category": "Engineering",
+        "type": "rss"
+    },
+    {
+        "name": "Uber Engineering",
+        "url": "https://www.uber.com/en-US/blog/engineering/rss/",
+        "category": "Engineering",
+        "type": "rss"
+    },
+    {
+        "name": "Cloudflare Blog",
+        "url": "https://blog.cloudflare.com/rss/",
+        "category": "Engineering",
+        "type": "rss"
+    },
+    {
+        "name": "Stripe Engineering",
+        "url": "https://stripe.com/blog/engineering/feed/rss",
+        "category": "Engineering",
+        "type": "rss"
+    },
+    {
+        "name": "Simon Willison",
+        "url": "https://simonwillison.net/atom/everything/",
+        "category": "LLM/AI",
+        "type": "rss"
+    },
+    {
+        "name": "Pragmatic Engineer",
+        "url": "https://newsletter.pragmaticengineer.com/feed",
+        "category": "Engineering/Culture",
+        "type": "rss"
+    },
+    {
+        "name": "Ars Technica",
+        "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+        "category": "Tech News",
+        "type": "rss"
+    },
+    {
+        "name": "STAT News",
+        "url": "https://www.statnews.com/feed/",
+        "category": "Healthcare Tech",
+        "type": "rss"
+    },
+    {
+        "name": "arXiv CS.AI",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "category": "Research Paper",
+        "type": "rss"
+    },
+    {
+        "name": "Hacker News",
+        "url": "https://hacker-news.firebaseio.com/v0",
+        "category": "Varied",
+        "type": "api",
+        "min_score": 200
+    }
+]

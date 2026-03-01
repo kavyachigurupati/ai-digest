@@ -1,0 +1,52 @@
+[
+  {
+    "headline": "Netflix overcomes CPU architecture bottlenecks for container scaling",
+    "url": "https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4",
+    "source": "Netflix Tech Blog",
+    "category": "Engineering",
+    "why_question": "What scaling challenge did this solve?",
+    "why_answer": "Netflix encountered unexpected performance bottlenecks when scaling containers on modern CPU architectures, specifically due to how the Linux kernel handled huge pages and NUMA. They engineered a solution by optimizing their container runtime with precise memory alignment and CPU pinning, which dramatically improved container responsiveness and efficiency for their global streaming service, akin to tuning a high-performance engine for peak output.",
+    "id": "ed2232c7-29a9-4bff-b205-83341e0b1193",
+    "scraped_at": "2026-03-01T05:33:19.481002+00:00"
+  },
+  {
+    "headline": "Netflix engineers platform for scalable LLM post-training",
+    "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4",
+    "source": "Netflix Tech Blog",
+    "category": "LLM Infrastructure",
+    "why_question": "What problem does this address in LLM deployment?",
+    "why_answer": "While pre-training gives LLMs general abilities, adapting them for specific production tasks like recommendations and personalization at Netflix requires efficient post-training. This article details how Netflix built a scalable platform to manage and iterate on this crucial post-training phase, enabling them to align generic foundation models with their unique domain constraints and reliability needs for new member experiences.",
+    "id": "1ea4517f-bf55-451e-b98b-1b0be7a9a3e0",
+    "scraped_at": "2026-03-01T05:33:19.481131+00:00"
+  },
+  {
+    "headline": "A skeptic's deep dive into the surprising capabilities of AI coding agents",
+    "url": "https://simonwillison.net/2026/Feb/27/ai-agent-coding-in-excessive-detail/#atom-everything",
+    "source": "Simon Willison",
+    "category": "LLM News & Updates",
+    "why_question": "What does this article reveal about the current state and potential of AI agent coding?",
+    "why_answer": "This extensive exploration from a skeptic demonstrates how AI coding agents have advanced to handle complex software projects, beyond simple scripts to ambitious library migrations. It highlights a significant shift in engineering workflows, showcasing how these agents are not just augmenting but potentially transforming the landscape of software development.",
+    "id": "ef632099-b0a6-48dc-8be3-b35090f69828",
+    "scraped_at": "2026-03-01T05:33:19.481164+00:00"
+  },
+  {
+    "headline": "Deep dive into the architecture and development of OpenAI's Codex",
+    "url": "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
+    "source": "Pragmatic Engineer",
+    "category": "LLM Infrastructure",
+    "why_question": "How is a leading AI coding agent like Codex built, and what are its implications for software engineering?",
+    "why_answer": "The article offers an exclusive look into OpenAI's Codex team, detailing the intricate engineering processes and architectural decisions behind their powerful AI coding agent. Understanding Codex's construction provides critical insights into the cutting-edge of AI development and signals how such sophisticated tools will fundamentally reshape future software development practices and methodologies.",
+    "id": "31578512-8272-4da2-a093-f9e3e1f67275",
+    "scraped_at": "2026-03-01T05:33:19.481191+00:00"
+  },
+  {
+    "headline": "Google's ingenious method to quantum-proof HTTPS with minimal data overhead",
+    "url": "https://arstechnica.com/security/2026/02/google-is-using-clever-math-to-quantum-proof-https-certificates/",
+    "source": "Ars Technica",
+    "category": "Engineering",
+    "why_question": "What technical challenge does quantum-proof HTTPS certificates present, and how did Google overcome it?",
+    "why_answer": "Quantum-resistant cryptographic algorithms produce significantly larger certificates, which would impose substantial overhead on internet traffic and infrastructure if implemented directly. Google innovated by using Merkle Tree Certificate support and advanced mathematical compression to shrink approximately 15KB of quantum-safe data into just 700 bytes, thus ensuring a secure, quantum-resistant future for HTTPS without compromising performance.",
+    "id": "02c518e4-afcb-4abf-b131-0b6079cad55b",
+    "scraped_at": "2026-03-01T05:33:19.481221+00:00"
+  }
+]
