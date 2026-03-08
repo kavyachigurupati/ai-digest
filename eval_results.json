@@ -1,0 +1,32 @@
+[
+  {
+    "eval_id": "ebad7818-8302-4d15-95e1-46d7f7eca47e",
+    "evaluated_at": "2026-03-08T22:26:48.749691+00:00",
+    "article_id": "86a03555-8a3d-4dc6-be12-d2e8b20f2ab1",
+    "article_url": "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
+    "headline": "Manual test article",
+    "source": "Manual",
+    "category": "Unknown",
+    "faithfulness_score": 5,
+    "faithfulness_reasoning": "The summary explicitly states it's in test mode with no summary available, making no claims about the article content.",
+    "relevance": true,
+    "relevance_reasoning": "This is a detailed technical deep dive into OpenAI's Codex development, architecture, and impact on software engineering practices, which would be highly valuable for technical readers.",
+    "fetch_failed": false,
+    "parse_error": false
+  },
+  {
+    "eval_id": "d7c679c1-23dd-49c7-ad2d-988514509144",
+    "evaluated_at": "2026-03-08T22:56:16.439012+00:00",
+    "article_id": "31578512-8272-4da2-a093-f9e3e1f67275",
+    "article_url": "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
+    "headline": "Deep dive into the architecture and development of OpenAI's Codex",
+    "source": "Pragmatic Engineer",
+    "category": "LLM Infrastructure",
+    "faithfulness_score": 5,
+    "faithfulness_reasoning": "The summary accurately reflects the article's focus on the architecture, engineering processes, and the implications of Codex for software engineering without introducing unverified claims.",
+    "relevance": true,
+    "relevance_reasoning": "This is a detailed engineering deep dive into a leading AI coding agent, addressing its construction, usage, and impact on software development, making it highly valuable for a technical audience.",
+    "fetch_failed": false,
+    "parse_error": false
+  }
+]
