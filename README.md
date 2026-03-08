@@ -194,6 +194,24 @@ See [PLANNED_FEATURES.md](./PLANNED_FEATURES.md) for the full roadmap. Highlight
 
 ---
 
+## Evaluation Framework
+
+The pipeline includes a structured eval system to measure summarization quality and relevance filtering accuracy. See [EVALS.md](./EVALS.md) for the full design.
+
+**What is being evaluated:**
+
+| Component | Measures | Target |
+|---|---|---|
+| LLM-as-Judge | Hallucination, faithfulness to source | > 4.0 / 5.0 |
+| BERTScore | Semantic similarity to reference summaries | F1 > 0.85 |
+| Relevance Precision & Recall | Are the right articles being selected? | Precision > 80%, Recall > 75% |
+| Consistency Testing | Stability of output across multiple runs | F1 > 0.90 |
+| Human Feedback UI | Real user satisfaction with articles and summaries | Thumbs-up > 70% |
+
+**Status:** Planning — implementation in progress. Results will be added to [EVALS.md](./EVALS.md) as each component is built.
+
+---
+
 ## Changelog
 
 ### v1.1.0 (Current)
